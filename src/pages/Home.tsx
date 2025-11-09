@@ -14,9 +14,9 @@ export default function Home() {
   const [_, setSelectedVehicle] = useLocalStorage<VehicleEntry | null>("vehicle", data[0]);
   const [search, setSearch] = useState<string>("");
   const [filterModal, setFilterModal] = useState<boolean>(false);
-  const [year, setYear] = useState<number[]>([0, 3000]);
-  const [price, setPrice] = useState<number[]>([0, 200000]);
-  const [seats, setSeats] = useState<number[]>([0, 20]);
+  const [year, setYear] = useState<number[]>([1995, 2026]);
+  const [price, setPrice] = useState<number[]>([0, 100000]);
+  const [seats, setSeats] = useState<number[]>([0, 10]);
   const [mpg, setMpg] = useState<number[]>([0, 100]);
   const [type, setType] = useState<string>("");
   const [aiModal, setAIModal] = useState<boolean>(false);
