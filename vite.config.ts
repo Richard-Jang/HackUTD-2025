@@ -8,7 +8,6 @@ export default defineConfig({
   base: "/HackUTD-2025/",
   plugins: [
     react(),
-    tailwindcss(),
   ],
   resolve: {
     alias: {
