@@ -1,7 +1,7 @@
 export default function Search({
   value,
   onChange,
-  placeholder = "Search...",
+  placeholder = "Search",
 }: {
   value: string;
   onChange: (v: string) => void;

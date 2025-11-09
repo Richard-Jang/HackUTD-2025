@@ -22,15 +22,15 @@ export default function ModelCard({
             </div>
             {favorite ? (
                 <div
-                    className="p-3 absolute right-0 bottom-0 text-rose-600 hover:scale-125 transition-all text-xl"
-                    onClick={handleLike}
-                >
-                    <FaHeart />
-                </div>
+                        className="p-3 absolute right-0 bottom-0 text-rose-600 hover:scale-125 transition-all text-xl"
+                        onClick={(e) => { e.stopPropagation(); handleLike(); }}
+                    >
+                        <FaHeart />
+                    </div>
             ) : (
                 <div
                     className="p-3 absolute right-0 bottom-0 text-rose-600 hover:scale-125 transition-all text-xl"
-                    onClick={handleLike}
+                    onClick={(e) => { e.stopPropagation(); handleLike(); }}
                 >
                     <FaRegHeart />
                 </div>

@@ -3,6 +3,8 @@ import vehicleData from "@/assets/data.json"
 
 import { useState } from "react"
 import Carousel from "@/components/Carousel";
+import ModelCard from "@/components/ModelCard";
+import useFavorites from "@/utils/useFavorites";
 import { useLocalStorage } from "@/utils/useLocalStorage";
 import { FaFilter, FaMessage, FaWandMagicSparkles, FaX } from "react-icons/fa6";
 import { GoogleGenAI } from "@google/genai";
@@ -73,6 +75,8 @@ export default function Home() {
     setMpg([parseInt(mpgArr ? mpgArr[0] : ""), parseInt(mpgArr ? mpgArr[1] : "")]);
     setAIModal(false);
   }
+
+  const { isFavorite, toggleFavorite } = useFavorites();
 
   return (
     <>
@@ -280,20 +284,19 @@ export default function Home() {
             .filter(value => parseInt(value.combinedMpg) >= mpg[0] && parseInt(value.combinedMpg) <= mpg[1])
             .filter(value => value.vehicleType.includes(type))
             .map((value, index) => {
+            const id = `${value.name.replaceAll(" ", "_").toLowerCase()}-${value.year}`;
             return (
               <div
                 key={`Vehicle grid: ${index}`}
                 className={`aspect-3/2 px-3 py-2 w-full rounded-lg flex flex-col transition-all hover:scale-110 border ${selectedVehicle.some(v => v.name == value.name && v.year == value.year) ? "border-rose-300" : "border-gray-300"}`}
                 onClick={() => {setSelectedVehicle([...selectedVehicle, value])}}
               >
-                <img
-                  src={value.vehicleImage}
-                  className="w-full aspect-auto"
+                <ModelCard
+                  name={value.name}
+                  image={value.vehicleImage}
+                  favorite={isFavorite(id)}
+                  handleLike={() => toggleFavorite(id)}
                 />
-                <div className="w-full grow flex items-end justify-between">
-                  <div className="font-bold">{value.name}{" "}{value.year}</div>
-                  <div>{value.price}</div>
-                </div>
               </div>
             )
           })}
