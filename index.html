@@ -15,7 +15,26 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    
+
+    <p class="flip" onclick="myFunction()">Sort by</p>
+
+<div id="panel">
+  <p>This panel contains a div element, which is hidden by default (display: none).</p>
+  <p>We use JavaScript to show it (display: block).</p>
+  <p>How it works: When the user clicks on the p element, a function called myFunction() is executed, which changes the style of the div with id="panel" from display:none (hidden) to display:block (visible).</p>
+  <p>You will learn more about JavaScript in our JavaScript Tutorial.</p>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("panel");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
   </body>
 </html>
 
@@ -51,5 +70,20 @@ ul li a {
 
 ul li a:hover {
   background-color: #111111;
+}
+
+#panel, .flip {
+  padding: 10px;
+  height: 10px;
+  width: 100px;
+  text-align: center;
+  background-color: #192059;
+  color: white;
+  border: solid 1px #070729;
+  margin: 0.5px auto;
+  cursor:pointer;
+}
+#panel {
+  display: none;
 }
 </style>
