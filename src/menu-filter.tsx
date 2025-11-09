@@ -1,7 +1,7 @@
 import React, { useState, useMemo, ChangeEvent } from "react";
 
 const FILTER_DATA = {
-  // year of car (user can pick from 2015 onwards).
+  // year of car (user can pick from 2016 onwards).
   years: [
     new Date().getFullYear(),
     new Date().getFullYear() - 1,
@@ -17,10 +17,12 @@ const FILTER_DATA = {
   ],
   makes: ["Toyota"],
   models: ["Camry", "Corolla", "Corolla Hybrid", "Camry Hybrid", "Crown", "Prius",
-          "RAV4", "RAV4 Hybrid", "Highlander", "Highlander Hybrid", 
-            
-          "Highlander", "Tacoma", "Tundra", "Sienna", ],
+          "RAV4", "RAV4 Hybrid", "Highlander", "Highlander Hybrid", "Grand Highlander",
+          "Sequoia", "Corolla Cross", "4Runner", "Venza", "Land Cruiser", "bZ4X", "Tacoma",
+          "Tundra", "Tundra Hybrid", "GR Corolla", "GR86", "GR Supra", "Sienna",
+          "Corolla Hatchback", "Mirai", "Century"],
   colors: ["White", "Black", "Silver", "Red", "Blue", "Gray", "Green"],
+
 };
 
 // price range constants.
@@ -130,10 +132,10 @@ function App() {
       <div className="w-full max-w-4xl bg-white shadow-xl rounded-2xl p-6 md:p-10">
         {/* Header */}
         <header className="pb-6 border-b border-gray-200 mb-6">
-          <h1 className="text-3xl font-extrabold text-blue-800 flex items-center mb-1">
+          <h1 className="text-3xl font-extrabold text-black-800 flex items-center mb-1">
             <svg
               className="w-8 h-8 mr-3 text-red-500"
-              fill="currentColor"
+              fill="red"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -183,7 +185,7 @@ function App() {
                 id="make"
                 value={selectedMake}
                 onChange={handleStringChange(setSelectedMake)}
-                className="w-full p-2 border border-gray-300 rounded-lg bg-gray-100 cursor-not-allowed focus:ring-blue-500 focus:border-blue-500 transition duration-150"
+                className="w-full p-2 border border-gray-300 rounded-lg bg-gray-100 cursor-not-allowed focus:ring-black-500 focus:border-black-500 transition duration-150"
                 disabled
               >
                 {FILTER_DATA.makes.map((make) => (
@@ -206,7 +208,7 @@ function App() {
                 id="model"
                 value={selectedModel}
                 onChange={handleStringChange(setSelectedModel)}
-                className="w-full p-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition duration-150"
+                className="w-full p-2 border border-gray-300 rounded-lg focus:ring-black-500 focus:border-black-500 transition duration-150"
               >
                 <option value="">Any Model</option>
                 {FILTER_DATA.models.map((model) => (
@@ -229,7 +231,7 @@ function App() {
                 id="color"
                 value={selectedColor}
                 onChange={handleStringChange(setSelectedColor)}
-                className="w-full p-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition duration-150"
+                className="w-full p-2 border border-gray-300 rounded-lg focus:ring-black-500 focus:border-black-500 transition duration-150"
               >
                 <option value="">Any Color</option>
                 {FILTER_DATA.colors.map((color) => (
@@ -255,7 +257,7 @@ function App() {
                 value={maxMileage === null ? "" : maxMileage}
                 onChange={handleNumberChange(setMaxMileage as NumberSetter)}
                 placeholder="e.g., 50,000"
-                className="w-full p-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition duration-150"
+                className="w-full p-2 border border-gray-300 rounded-lg focus:ring-black-500 focus:border-black-500 transition duration-150"
               />
             </div>
           </div>
@@ -343,9 +345,9 @@ function App() {
             {filterSummary.details.map((item, index) => (
               <div
                 key={index}
-                className="bg-blue-50 p-3 rounded-lg border border-blue-200"
+                className="bg-black-50 p-3 rounded-lg border border-black-200"
               >
-                <p className="text-xs font-medium text-blue-700">
+                <p className="text-xs font-medium text-black-700">
                   {item.label}
                 </p>
                 <p className="text-md font-semibold text-gray-800">
