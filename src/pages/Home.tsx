@@ -7,8 +7,8 @@ import ModelCard from "@/components/ModelCard";
 import useFavorites from "@/utils/useFavorites";
 import { useLocalStorage } from "@/utils/useLocalStorage";
 import { FaFilter, FaMessage, FaWandMagicSparkles, FaX } from "react-icons/fa6";
-import { Link } from "react-router-dom";
 import { GoogleGenAI } from "@google/genai";
+import { Link } from "react-router-dom";
 
 export default function Home() {
 

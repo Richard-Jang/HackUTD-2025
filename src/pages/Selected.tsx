@@ -1,5 +1,6 @@
 import type { VehicleEntry } from "@/components/types";
 import { useLocalStorage } from "@/utils/useLocalStorage";
+import { GoogleGenAI } from "@google/genai";
 import { useNavigate } from "react-router-dom";
 
 export default function Selected() {
@@ -11,10 +12,39 @@ export default function Selected() {
         return <></>
     }
 
+    const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
+
+    async function handleGenerateFilters(): Promise<number[][]> {
+        const response = await ai.models.generateContent({
+            model: "gemini-2.5-flash",
+            contents: selectedVehicle + "\nGenerate standard leasing prices for the specified vehicle in the format [cost, cost, cost, cost] for the cost per month for 12, 24, 36, 48 months of the vehicle. Then, generate standard finance prices for the vehicle 12 to 96 months in the same format. if not given, assume credit score of 750 and an average apr rate. DO NOT include any extra text or explanations. response should follow the exact formatting \nlease: [cost, cost, cost, cost]\nfinance: [cost, cost, cost, cost, cost, cost, cost, cost]"
+        });
+        let leaseArray = [];
+        const leaseString = response.text?.substring(response.text.indexOf("lease: [") + 1, response.text.indexOf("]")).split(", ");
+        leaseArray.push([]);
+        leaseString?.forEach(value => {
+            leaseArray[0].push(parseInt(value))
+        })
+
+    }
     return (
         <>
-        <div className="w-full">
-
+        <div className="w-full flex flex-col gap-5">
+            <div className="flex flex-col gap-3">
+                <div className="font-bold text-2xl">Lease</div>
+                <div className="grid grid-cols-6">
+                    <div className="border border-gray-300 p-3 col-span-2 font-bold">Term length (months)</div>
+                    <div className="border border-gray-300 p-3">12</div>
+                    <div className="border border-gray-300 p-3">24</div>
+                    <div className="border border-gray-300 p-3">36</div>
+                    <div className="border border-gray-300 p-3">48</div>
+                    <div className="border border-gray-300 p-3 col-span-2 font-bold">Cost per month</div>
+                    <div className="border border-gray-300 p-3">12</div>
+                    <div className="border border-gray-300 p-3">24</div>
+                    <div className="border border-gray-300 p-3">36</div>
+                    <div className="border border-gray-300 p-3">48</div>
+                </div>
+            </div>
         </div>
         </>
     )
