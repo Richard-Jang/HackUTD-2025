@@ -1,17 +1,19 @@
 import type { VehicleEntry } from "@/components/types"
 import vehicleData from "@/assets/data.json"
 
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import Carousel from "@/components/Carousel";
+import ModelCard from "@/components/ModelCard";
+import useFavorites from "@/utils/useFavorites";
 import { useLocalStorage } from "@/utils/useLocalStorage";
 import { FaFilter, FaMessage, FaWandMagicSparkles, FaX } from "react-icons/fa6";
 import { GoogleGenAI } from "@google/genai";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Home() {
 
   const [data] = useState<VehicleEntry[]>(vehicleData);
-  const [_, setSelectedVehicle] = useLocalStorage<VehicleEntry | null>("vehicle", data[0]);
+  const [selectedVehicle, setSelectedVehicle] = useLocalStorage<VehicleEntry[]>("vehicle", []);
   const [search, setSearch] = useState<string>("");
   const [filterModal, setFilterModal] = useState<boolean>(false);
   const [year, setYear] = useState<number[]>([1995, 2026]);
@@ -23,6 +25,7 @@ export default function Home() {
   const [aiText, setAIText] = useState<string>("");
 
   const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
+  const navigate = useNavigate();
 
   function handleYearLower(value: string) {
     if (isNaN(Number(value))) return;
@@ -73,9 +76,7 @@ export default function Home() {
     setAIModal(false);
   }
 
-  useEffect(() => {
-    setSelectedVehicle(data[0]);
-  })
+  const { isFavorite, toggleFavorite } = useFavorites();
 
   return (
     <>
@@ -274,7 +275,7 @@ export default function Home() {
         </div>
 
         {/* Car Grid */}
-        <div className="w-3/4 grid grid-cols-3 gap-6">
+        <div className="w-full grid grid-cols-3 gap-6">
           {data
             .filter(value => value.name.includes(search))
             .filter(value => parseInt(value.year) >= year[0] && parseInt(value.year) <= year[1])
@@ -283,22 +284,20 @@ export default function Home() {
             .filter(value => parseInt(value.combinedMpg) >= mpg[0] && parseInt(value.combinedMpg) <= mpg[1])
             .filter(value => value.vehicleType.includes(type))
             .map((value, index) => {
+            const id = `${value.name.replaceAll(" ", "_").toLowerCase()}-${value.year}`;
             return (
-              <Link
+              <div
                 key={`Vehicle grid: ${index}`}
-                to={"./selected"}
-                className="aspect-3/2 px-3 py-2 w-full rounded-lg flex flex-col transition-all hover:scale-110 border border-gray-300"
-                onClick={() => {setSelectedVehicle(value)}}
+                className={`aspect-3/2 px-3 py-2 w-full rounded-lg flex flex-col transition-all hover:scale-110 border ${selectedVehicle.some(v => v.name == value.name && v.year == value.year) ? "border-rose-300" : "border-gray-300"}`}
+                onClick={() => {setSelectedVehicle([...selectedVehicle, value])}}
               >
-                <img
-                  src={value.vehicleImage}
-                  className="w-full aspect-auto"
+                <ModelCard
+                  name={value.name}
+                  image={value.vehicleImage}
+                  favorite={isFavorite(id)}
+                  handleLike={() => toggleFavorite(id)}
                 />
-                <div className="w-full grow flex items-end justify-between">
-                  <div className="font-bold">{value.name}{" "}{value.year}</div>
-                  <div>{value.price}</div>
-                </div>
-              </Link>
+              </div>
             )
           })}
           <div
@@ -313,6 +312,16 @@ export default function Home() {
             No vehicles available!
           </div>
         </div>
+      </div>
+      {/* Next */}
+      <div className="w-full flex items-center justify-end">
+        <button
+          className={`${selectedVehicle.length == 0 ? "bg-white text-black" : "bg-black text-white"} border border-gray-300 rounded-lg py-2 px-3`}
+          disabled={selectedVehicle.length == 0}
+          onClick={() => {navigate("./selected")}}
+        >
+          Compare
+        </button>
       </div>
     </div>
     </>
