@@ -64,21 +64,13 @@ export default function Favorites() {
           {favoritesList.length == 0 ? (
             <div className="col-span-3 p-8 text-center text-zinc-600">You have no favorites.</div>
           ) : (
-            favoritesList.map((f) => (
-              <Link
-                key={f.id}
-                to={"./selected"}
-                className="aspect-3/2 px-3 py-2 w-full rounded-lg flex flex-col transition-all hover:scale-110 border border-gray-300"
-                onClick={() => {setSelectedVehicle(f)}}
-              >
-              <ModelCard
-                key={f.id}
-                name={f.name}
-                image={(f as any).vehicleImage || ""}
-                favorite={isFavorite(f.id)}
-                handleLike={() => toggleFavorite(f.id)}
-              />
-              </Link>
+            favoritesList.map((value) => (
+                <ModelCard
+                  name={value.name}
+                  image={value.vehicleImage}
+                  favorite={isFavorite(value.id)}
+                  handleLike={() => toggleFavorite(value.id)}
+                />
             )
             )
           )
