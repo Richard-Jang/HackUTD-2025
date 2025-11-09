@@ -14,13 +14,19 @@ export default function Selected() {
 
     const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
 
-    async function handleGenerateFilters() {
+    async function handleGenerateFilters(): Promise<number[][]> {
         const response = await ai.models.generateContent({
             model: "gemini-2.5-flash",
-            contents: ""
+            contents: selectedVehicle + "\nGenerate standard leasing prices for the specified vehicle in the format [cost, cost, cost, cost] for the cost per month for 12, 24, 36, 48 months of the vehicle. Then, generate standard finance prices for the vehicle 12 to 96 months in the same format. if not given, assume credit score of 750 and an average apr rate. DO NOT include any extra text or explanations. response should follow the exact formatting \nlease: [cost, cost, cost, cost]\nfinance: [cost, cost, cost, cost, cost, cost, cost, cost]"
         });
-    }
+        let leaseArray = [];
+        const leaseString = response.text?.substring(response.text.indexOf("lease: [") + 1, response.text.indexOf("]")).split(", ");
+        leaseArray.push([]);
+        leaseString?.forEach(value => {
+            leaseArray[0].push(parseInt(value))
+        })
 
+    }
     return (
         <>
         <div className="w-full flex flex-col gap-5">
