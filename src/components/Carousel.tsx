@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import type { VehicleEntry } from "./types";
+import { useLocalStorage } from "@/utils/useLocalStorage";
+import { Link } from "react-router-dom";
 
 export default function Carousel({
     data,
@@ -11,22 +13,25 @@ export default function Carousel({
 
     const [current, setCurrent] = useState<number>(0);
     const newData = [data[data.length - 1], ...data, data[0]];
+    const [selectedVehicle, setSelectedVehicle] = useLocalStorage<VehicleEntry | null>("vehicle", null);
     
     const prevSlide = () => setCurrent((current - 1 + data.length) % data.length);
     const nextSlide = () => setCurrent((current + 1) % data.length);
 
     
     return (
-    <div className="relative w-full mx-auto rounded-2xl">
+    <div className="relative w-full mx-auto rounded-2xl mb-12">
         {/* Slides */}
         <div
             className={`w-full h-[120%] flex transition-transform duration-500 ease-out`}
             style={{ transform: `translateX(-${current * 1 / 3 * 100}%)` }}
         >
             {newData.map((value, index) => {
-                return <div
-                    className="w-1/3 flex-shrink-0 object-cover transition-transform duration-500 ease-out"
+                return <Link
+                    to={"../selected"}
+                    className="w-1/3 flex-shrink-0 object-cover transition-transform duration-500 ease-out hover:scale-110"
                     style={{ transform: `translateY(${index - 1 == current ? "20" : "0"}%)` }}
+                    onClick={() => {setSelectedVehicle(value)}}
                 >
                     <img
                         key={`Slide ${index}`}
@@ -35,7 +40,7 @@ export default function Carousel({
                         className="w-full"
                     />
                     <div className="w-full py-2 flex items-center justify-center text-lg font-bold">{value.name}</div>
-                </div>
+                </Link>
             })}
         </div>
 
