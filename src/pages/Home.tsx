@@ -4,13 +4,13 @@ import vehicleData from "@/assets/data.json"
 import { useEffect, useState } from "react"
 import Carousel from "@/components/Carousel";
 import { useLocalStorage } from "@/utils/useLocalStorage";
-import { FaFilter, FaMessage, FaWandMagicSparkles, FaX } from "react-icons/fa";
+import { FaFilter, FaMessage, FaWandMagicSparkles, FaX } from "react-icons/fa6";
 import { GoogleGenAI } from "@google/genai";
+import { Link } from "react-router-dom";
 
 export default function Home() {
 
   const [data] = useState<VehicleEntry[]>(vehicleData);
-  const [data, setData] = useState(null);
   const [_, setSelectedVehicle] = useLocalStorage<VehicleEntry | null>("vehicle", data[0]);
   const [search, setSearch] = useState<string>("");
   const [filterModal, setFilterModal] = useState<boolean>(false);
