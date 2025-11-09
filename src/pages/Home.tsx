@@ -7,12 +7,10 @@ import { useLocalStorage } from "@/utils/useLocalStorage";
 
 export default function Home() {
 
-    const [data, setData] = useState<VehicleEntry[]>([]);
+    const [data, _] = useState<VehicleEntry[]>(vehicleData);
     const [count, setCount] = useLocalStorage<number>("test", 0);
 
-    useEffect(() => {
-        setData(vehicleData);
-    }, []);
+    console.log(parseInt(data[0].price.replaceAll(",", "").replaceAll("$", "")));
 
   return (
     <div className="w-full h-full p-8">
@@ -20,7 +18,7 @@ export default function Home() {
           data={data.filter((value, index) => index == data.findIndex(v => v.name == value.name)).filter((_, index) => index < 5)}
       /> */}
       <button onClick={() => setCount(count + 1)}>
-        {count.toString()}
+        {count}
       </button>
     </div>
   )
