@@ -1,17 +1,22 @@
-import ModelCard from "@/components/ModelCard";
+import type { VehicleEntry } from "@/components/types"
+import vehicleData from "@/assets/data.json"
+
+import { useEffect, useState } from "react"
+import Carousel from "@/components/Carousel";
 
 export default function Home() {
 
+    const [data, setData] = useState<VehicleEntry[]>([]);
+
+    useEffect(() => {
+        setData(vehicleData);
+    }, []);
+
   return (
-    <div className="w-full h-full bg-black p-8">
-        <div className="w-1/3">
-            <ModelCard
-                name="Model Name"
-                image=""
-                favorite={false}
-                handleLike={() => {}}
-            />
-        </div>
+    <div className="w-full h-full p-8">
+        <Carousel
+            data={data.filter((value, index) => index == data.findIndex(v => v.name == value.name)).filter((_, index) => index < 5)}
+        />
     </div>
   )
 }
