@@ -3,6 +3,8 @@ import vehicleData from "@/assets/data.json"
 
 import { useEffect, useState } from "react"
 import Carousel from "@/components/Carousel";
+import ModelCard from "@/components/ModelCard";
+import useFavorites from "@/utils/useFavorites";
 import { useLocalStorage } from "@/utils/useLocalStorage";
 import { FaFilter, FaMessage, FaWandMagicSparkles, FaX } from "react-icons/fa6";
 import { Link } from "react-router-dom";
@@ -76,6 +78,8 @@ export default function Home() {
   useEffect(() => {
     setSelectedVehicle(data[0]);
   })
+
+  const { isFavorite, toggleFavorite } = useFavorites();
 
   return (
     <>
@@ -283,6 +287,7 @@ export default function Home() {
             .filter(value => parseInt(value.combinedMpg) >= mpg[0] && parseInt(value.combinedMpg) <= mpg[1])
             .filter(value => value.vehicleType.includes(type))
             .map((value, index) => {
+            const id = `${value.name.replaceAll(" ", "_").toLowerCase()}-${value.year}`;
             return (
               <Link
                 key={`Vehicle grid: ${index}`}
@@ -290,14 +295,12 @@ export default function Home() {
                 className="aspect-3/2 px-3 py-2 w-full rounded-lg flex flex-col transition-all hover:scale-110 border border-gray-300"
                 onClick={() => {setSelectedVehicle(value)}}
               >
-                <img
-                  src={value.vehicleImage}
-                  className="w-full aspect-auto"
+                <ModelCard
+                  name={value.name}
+                  image={value.vehicleImage}
+                  favorite={isFavorite(id)}
+                  handleLike={() => toggleFavorite(id)}
                 />
-                <div className="w-full grow flex items-end justify-between">
-                  <div className="font-bold">{value.name}{" "}{value.year}</div>
-                  <div>{value.price}</div>
-                </div>
               </Link>
             )
           })}
