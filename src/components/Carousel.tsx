@@ -17,16 +17,16 @@ export default function Carousel({
 
     
     return (
-    <div className="relative w-full mx-auto overflow-hidden rounded-2xl">
+    <div className="relative w-full mx-auto rounded-2xl">
         {/* Slides */}
         <div
-            className="w-full flex transition-transform duration-500 ease-out"
+            className={`w-full h-[120%] flex transition-transform duration-500 ease-out`}
             style={{ transform: `translateX(-${current * 1 / 3 * 100}%)` }}
         >
             {newData.map((value, index) => {
                 return <div
-                    className="w-1/3 flex-shrink-0 object-cover"
-                    style={{ transform: `translateY(${index == current ? "20" : "0"}%)` }}
+                    className="w-1/3 flex-shrink-0 object-cover transition-transform duration-500 ease-out"
+                    style={{ transform: `translateY(${index - 1 == current ? "20" : "0"}%)` }}
                 >
                     <img
                         key={`Slide ${index}`}
