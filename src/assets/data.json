@@ -1,0 +1,497 @@
+[
+  {
+    "year": "2026",
+    "name": "4Runner",
+    "price": "$41,570",
+    "seatCount": "7",
+    "combinedMpg": "22",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2026/4runner/base.png",
+    "vehicleType": "suvs,Crossovers & SUVs"
+  },
+  {
+    "year": "2025",
+    "name": "4Runner",
+    "price": "$41,270",
+    "seatCount": "7",
+    "combinedMpg": "22",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2025/4runner/base.png",
+    "vehicleType": "suvs,Crossovers & SUVs"
+  },
+  {
+    "year": "2026",
+    "name": "4Runner i-FORCE MAX",
+    "price": "$52,790",
+    "seatCount": "5",
+    "combinedMpg": "23",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2026/4runnerhybrid/base.png",
+    "vehicleType": "suvs,Electrified,Crossovers & SUVs"
+  },
+  {
+    "year": "2025",
+    "name": "4Runner i-FORCE MAX",
+    "price": "$52,490",
+    "seatCount": "5",
+    "combinedMpg": "23",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2025/4runnerhybrid/base.png",
+    "vehicleType": "suvs,Electrified,Crossovers & SUVs"
+  },
+  {
+    "year": "2026",
+    "name": "Camry",
+    "price": "$29,000",
+    "seatCount": "5",
+    "combinedMpg": "51",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2026/camry/base.png",
+    "vehicleType": "Electrified,cars,Cars & Minivan"
+  },
+  {
+    "year": "2025",
+    "name": "Camry",
+    "price": "$28,700",
+    "seatCount": "5",
+    "combinedMpg": "51",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2025/camry/base.png",
+    "vehicleType": "Electrified,Cars & Minivan,cars"
+  },
+  {
+    "year": "2026",
+    "name": "Corolla",
+    "price": "$22,725",
+    "seatCount": "5",
+    "combinedMpg": "35",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2026/corolla/base.png",
+    "vehicleType": "Cars & Minivan,cars"
+  },
+  {
+    "year": "2025",
+    "name": "Corolla",
+    "price": "$22,325",
+    "seatCount": "5",
+    "combinedMpg": "35",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2025/corolla/base.png",
+    "vehicleType": "Cars & Minivan,cars"
+  },
+  {
+    "year": "2025",
+    "name": "Corolla Cross",
+    "price": "$24,135",
+    "seatCount": "5",
+    "combinedMpg": "32",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2025/corollacross/base.png",
+    "vehicleType": "crossovers,Crossovers & SUVs"
+  },
+  {
+    "year": "2026",
+    "name": "Corolla Cross",
+    "price": "$24,935",
+    "seatCount": "5",
+    "combinedMpg": "32",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2026/corollacross/base.png",
+    "vehicleType": "crossovers,Crossovers & SUVs"
+  },
+  {
+    "year": "2025",
+    "name": "Corolla Cross Hybrid",
+    "price": "$28,495",
+    "seatCount": "5",
+    "combinedMpg": "42",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2025/corollacrosshybrid/base.png",
+    "vehicleType": "crossovers,Electrified,Crossovers & SUVs"
+  },
+  {
+    "year": "2026",
+    "name": "Corolla Cross Hybrid",
+    "price": "$29,295",
+    "seatCount": "5",
+    "combinedMpg": "42",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2026/corollacrosshybrid/base.png",
+    "vehicleType": "crossovers,Electrified,Crossovers & SUVs"
+  },
+  {
+    "year": "2026",
+    "name": "Corolla Hatchback",
+    "price": "$24,180",
+    "seatCount": "5",
+    "combinedMpg": "35",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2026/corollahatchback/base.png",
+    "vehicleType": "Cars & Minivan,cars"
+  },
+  {
+    "year": "2025",
+    "name": "Corolla Hatchback",
+    "price": "$23,780",
+    "seatCount": "5",
+    "combinedMpg": "35",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2025/corollahatchback/base.png",
+    "vehicleType": "Cars & Minivan,cars"
+  },
+  {
+    "year": "2026",
+    "name": "Corolla Hybrid",
+    "price": "$24,575",
+    "seatCount": "5",
+    "combinedMpg": "50",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2026/corollahybrid/base.png",
+    "vehicleType": "Electrified,Cars & Minivan,cars"
+  },
+  {
+    "year": "2025",
+    "name": "Corolla Hybrid",
+    "price": "$23,825",
+    "seatCount": "5",
+    "combinedMpg": "50",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2025/corollahybrid/base.png",
+    "vehicleType": "Electrified,Cars & Minivan,cars"
+  },
+  {
+    "year": "2026",
+    "name": "GR Corolla",
+    "price": "$39,920",
+    "seatCount": "5",
+    "combinedMpg": "24",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2026/grcorolla/base.png",
+    "vehicleType": "Performance,cars,Cars & Minivan"
+  },
+  {
+    "year": "2025",
+    "name": "GR Corolla",
+    "price": "$39,160",
+    "seatCount": "5",
+    "combinedMpg": "24",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2025/grcorolla/base.png",
+    "vehicleType": "Performance,cars,Cars & Minivan"
+  },
+  {
+    "year": "2025",
+    "name": "GR Supra",
+    "price": "$56,250",
+    "seatCount": "2",
+    "combinedMpg": "26",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2025/grsupra/base.png",
+    "vehicleType": "Cars & Minivan,cars"
+  },
+  {
+    "year": "2026",
+    "name": "GR Supra",
+    "price": "$57,500",
+    "seatCount": "2",
+    "combinedMpg": "26",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2026/grsupra/base.png",
+    "vehicleType": "Performance,cars,Cars & Minivan"
+  },
+  {
+    "year": "2026",
+    "name": "GR86",
+    "price": "$30,800",
+    "seatCount": "4",
+    "combinedMpg": "24",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2026/gr86/base.png",
+    "vehicleType": "Performance,cars,Cars & Minivan"
+  },
+  {
+    "year": "2025",
+    "name": "GR86",
+    "price": "$30,400",
+    "seatCount": "4",
+    "combinedMpg": "22",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2025/gr86/base.png",
+    "vehicleType": "Performance,cars,Cars & Minivan"
+  },
+  {
+    "year": "2025",
+    "name": "Grand Highlander",
+    "price": "$40,860",
+    "seatCount": "8",
+    "combinedMpg": "24",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2025/grandhighlander/base.png",
+    "vehicleType": "crossovers,Crossovers & SUVs"
+  },
+  {
+    "year": "2026",
+    "name": "Grand Highlander",
+    "price": "$41,360",
+    "seatCount": "8",
+    "combinedMpg": "24",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2026/grandhighlander/base.png",
+    "vehicleType": "crossovers,Crossovers & SUVs"
+  },
+  {
+    "year": "2025",
+    "name": "Grand Highlander Hybrid",
+    "price": "$44,210",
+    "seatCount": "8",
+    "combinedMpg": "36",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2025/grandhighlanderhybrid/base.png",
+    "vehicleType": "crossovers,Electrified,Crossovers & SUVs"
+  },
+  {
+    "year": "2026",
+    "name": "Grand Highlander Hybrid",
+    "price": "$44,710",
+    "seatCount": "8",
+    "combinedMpg": "36",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2026/grandhighlanderhybrid/base.png",
+    "vehicleType": "crossovers,Electrified,Crossovers & SUVs"
+  },
+  {
+    "year": "2026",
+    "name": "Highlander",
+    "price": "$45,270",
+    "seatCount": "8",
+    "combinedMpg": "24",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2026/highlander/base.png",
+    "vehicleType": "crossovers,Crossovers & SUVs"
+  },
+  {
+    "year": "2025",
+    "name": "Highlander",
+    "price": "$40,320",
+    "seatCount": "8",
+    "combinedMpg": "25",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2025/highlander/base.png",
+    "vehicleType": "crossovers,Crossovers & SUVs"
+  },
+  {
+    "year": "2026",
+    "name": "Highlander Hybrid",
+    "price": "$47,020",
+    "seatCount": "8",
+    "combinedMpg": "35",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2026/highlanderhybrid/base.png",
+    "vehicleType": "crossovers,Electrified,Crossovers & SUVs"
+  },
+  {
+    "year": "2025",
+    "name": "Highlander Hybrid",
+    "price": "$46,820",
+    "seatCount": "8",
+    "combinedMpg": "35",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2025/highlanderhybrid/base.png",
+    "vehicleType": "crossovers,Electrified,Crossovers & SUVs"
+  },
+  {
+    "year": "2025",
+    "name": "Land Cruiser",
+    "price": "$56,700",
+    "seatCount": "5",
+    "combinedMpg": "23",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2025/landcruiser/base.png",
+    "vehicleType": "suvs,Electrified,Crossovers & SUVs"
+  },
+  {
+    "year": "2026",
+    "name": "Land Cruiser",
+    "price": "$57,200",
+    "seatCount": "5",
+    "combinedMpg": "23",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2026/landcruiser/base.png",
+    "vehicleType": "suvs,Electrified,Crossovers & SUVs"
+  },
+  {
+    "year": "2025",
+    "name": "Mirai",
+    "price": "$51,795",
+    "seatCount": "5",
+    "combinedMpg": "74",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2025/mirai/base.png",
+    "vehicleType": "Electrified,Cars & Minivan,cars"
+  },
+  {
+    "year": "2025",
+    "name": "Prius",
+    "price": "$28,350",
+    "seatCount": "5",
+    "combinedMpg": "57",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2025/prius/base.png",
+    "vehicleType": "Electrified,Cars & Minivan,cars"
+  },
+  {
+    "year": "2026",
+    "name": "Prius",
+    "price": "$28,550",
+    "seatCount": "5",
+    "combinedMpg": "57",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2026/prius/base.png",
+    "vehicleType": "Electrified,Cars & Minivan,cars"
+  },
+  {
+    "year": "2025",
+    "name": "Prius Plug-in Hybrid",
+    "price": "$33,375",
+    "seatCount": "5",
+    "combinedMpg": "48",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2025/priuspluginhybrid/base.png",
+    "vehicleType": "Electrified,cars,Cars & Minivan"
+  },
+  {
+    "year": "2026",
+    "name": "Prius Plug-in Hybrid",
+    "price": "$33,775",
+    "seatCount": "5",
+    "combinedMpg": "52",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2026/priuspluginhybrid/base.png",
+    "vehicleType": "Electrified,cars,Cars & Minivan"
+  },
+  {
+    "year": "2025",
+    "name": "RAV4",
+    "price": "$29,800",
+    "seatCount": "5",
+    "combinedMpg": "30",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2025/rav4/base.png",
+    "vehicleType": "crossovers,Crossovers & SUVs"
+  },
+  {
+    "year": "2025",
+    "name": "RAV4 Hybrid",
+    "price": "$32,850",
+    "seatCount": "5",
+    "combinedMpg": "39",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2025/rav4hybrid/base.png",
+    "vehicleType": "crossovers,Electrified,Crossovers & SUVs"
+  },
+  {
+    "year": "2025",
+    "name": "RAV4 Plug-in Hybrid",
+    "price": "$44,815",
+    "seatCount": "5",
+    "combinedMpg": "38",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2025/rav4pluginhybrid/base.png",
+    "vehicleType": "crossovers,Electrified,Crossovers & SUVs"
+  },
+  {
+    "year": "2025",
+    "name": "Sequoia",
+    "price": "$62,425",
+    "seatCount": "8",
+    "combinedMpg": "22",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2025/sequoia/base.png",
+    "vehicleType": "suvs,Electrified,Crossovers & SUVs"
+  },
+  {
+    "year": "2026",
+    "name": "Sequoia",
+    "price": "$64,025",
+    "seatCount": "8",
+    "combinedMpg": "22",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2026/sequoia/base.png",
+    "vehicleType": "suvs,Electrified,Crossovers & SUVs"
+  },
+  {
+    "year": "2026",
+    "name": "Sienna",
+    "price": "$40,120",
+    "seatCount": "8",
+    "combinedMpg": "36",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2026/sienna/base.png",
+    "vehicleType": "minivans,Electrified,Cars & Minivan"
+  },
+  {
+    "year": "2025",
+    "name": "Sienna",
+    "price": "$39,485",
+    "seatCount": "8",
+    "combinedMpg": "36",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2025/sienna/base.png",
+    "vehicleType": "minivans,Electrified,Cars & Minivan"
+  },
+  {
+    "year": "2024",
+    "name": "Tacoma",
+    "price": "$31,500",
+    "seatCount": "5",
+    "combinedMpg": "23",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2024/tacoma/base.png",
+    "vehicleType": "Trucks"
+  },
+  {
+    "year": "2025",
+    "name": "Tacoma",
+    "price": "$31,590",
+    "seatCount": "5",
+    "combinedMpg": "23",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2025/tacoma/base.png",
+    "vehicleType": "Trucks"
+  },
+  {
+    "year": "2024",
+    "name": "Tacoma i-FORCE MAX",
+    "price": "$46,300",
+    "seatCount": "5",
+    "combinedMpg": "23",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2024/tacomahybrid/base.png",
+    "vehicleType": "Electrified"
+  },
+  {
+    "year": "2025",
+    "name": "Tacoma i-FORCE MAX",
+    "price": "$46,720",
+    "seatCount": "5",
+    "combinedMpg": "23",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2025/tacomahybrid/base.png",
+    "vehicleType": "Electrified"
+  },
+  {
+    "year": "2025",
+    "name": "Toyota Crown",
+    "price": "$41,440",
+    "seatCount": "5",
+    "combinedMpg": "41",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2025/toyotacrown/base.png",
+    "vehicleType": "Electrified,Cars & Minivan,cars"
+  },
+  {
+    "year": "2026",
+    "name": "Toyota Crown",
+    "price": "$41,440",
+    "seatCount": "5",
+    "combinedMpg": "41",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2026/toyotacrown/base.png",
+    "vehicleType": "Electrified,Cars & Minivan,cars"
+  },
+  {
+    "year": "2025",
+    "name": "Toyota Crown Signia",
+    "price": "$44,090",
+    "seatCount": "5",
+    "combinedMpg": "38",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2025/toyotacrownsignia/base.png",
+    "vehicleType": "crossovers,Electrified,Crossovers & SUVs"
+  },
+  {
+    "year": "2025",
+    "name": "Tundra",
+    "price": "$40,090",
+    "seatCount": "5",
+    "combinedMpg": "20",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2025/tundra/base.png",
+    "vehicleType": "Trucks"
+  },
+  {
+    "year": "2026",
+    "name": "Tundra",
+    "price": "$41,260",
+    "seatCount": "5",
+    "combinedMpg": "20",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2026/tundra/base.png",
+    "vehicleType": "Trucks"
+  },
+  {
+    "year": "2025",
+    "name": "Tundra i-FORCE MAX",
+    "price": "$58,005",
+    "seatCount": "5",
+    "combinedMpg": "22",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2025/tundrahybrid/base.png",
+    "vehicleType": "Electrified"
+  },
+  {
+    "year": "2026",
+    "name": "Tundra i-FORCE MAX",
+    "price": "$58,560",
+    "seatCount": "5",
+    "combinedMpg": "22",
+    "vehicleImage": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/relative/2026/tundrahybrid/base.png",
+    "vehicleType": "Electrified"
+  }
+]
